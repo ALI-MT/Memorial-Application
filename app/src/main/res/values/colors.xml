@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6979F8</color>
+    <color name="colorPrimaryDark">#3655FF</color>
+    <color name="colorAccent">#FD4870</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="background">#F5F6FA</color>
+    <color name="colorYellow">#face00</color>
+    <color name="colorYellow2">#FFE056</color>
+    <color name="colorRed">#FD3460</color>
+    <color name="colorRed2">#FC5D80</color>
+    <color name="colorGray">#C3C3C3</color>
+    <color name="colorGreen">#298503</color>
+    <color name="colorBronze">#C96B33</color>
+    <color name="colorCoin">#997DF8</color>
+    <color name="colorContact">#5598FC</color>
+    <color name="colorAudio">#F5842C</color>
+    <color name="colorGallery">#6979F8</color>
+    <color name="colorGallery2">#3F3959</color>
+
+    <color name="green_059564">#059564</color>
+    <color name="red_C30013">#C30013</color>
+    <color name="yellow_FEC107">#FEC107</color>
+    <color name="fab">#313D5F</color>
+    <color name="pink_FD4870">#FD4870</color>
+
+    <color name="transparent">#00FFFFFF</color>
+    <color name="white05">#88FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black05">#88000000</color>
+    <color name="black">#000000</color>
+
+    <color name="text_dark">#353B50</color>
+    <color name="text_light">#A4A6AE</color>
+
+    <color name="gray_FAFAFA">#FAFAFA</color>
+    <color name="gray_DEE2F9">#DEE2F9</color>
+    <color name="gray_A4A6AE">#A4A6AE</color>
+    <color name="gray_707070">#909090</color>
+    <color name="gray_444444">#444444</color>
+    <color name="gray_202020">#202020</color>
+    <color name="blue_3655FF">#3655FF</color>
+
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginHorizontal="@dimen/_20sdp"
+    android:background="@drawable/bg_card"
+    android:orientation="vertical"
+    android:padding="@dimen/_20sdp">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:padding="@dimen/_8sdp"
+        android:text="@string/advanced_setting"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:padding="@dimen/_12sdp"
+        android:text="@string/facebook"
+        android:textColor="@color/text_dark"
+        android:fontFamily="@font/qanelas_soft_demo_medium"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:padding="@dimen/_12sdp"
+        android:text="@string/twitter"
+        android:textColor="@color/text_dark"
+        android:fontFamily="@font/qanelas_soft_demo_medium"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:padding="@dimen/_12sdp"
+        android:text="@string/telegram"
+        android:textColor="@color/text_dark"
+        android:fontFamily="@font/qanelas_soft_demo_medium"
+        android:textSize="@dimen/_12sdp" />
+
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:background="@drawable/bg_btn"
+        android:text="@string/ok"
+        android:textColor="@color/white" />
+
+</LinearLayout>

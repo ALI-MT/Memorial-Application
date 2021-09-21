@@ -1,0 +1,170 @@
+<resources>
+   <string name="app_name">Memorial</string>
+   <string name="title_activity_maps">Map</string>
+   <string name="get_the_code">Get The Code</string>
+   <string name="verify_code">Verify Code</string>
+   <string name="txt_description_user_verify">Your Number Will Not Be Shown Publicly</string>
+   <string name="txt_title_user_verify">Entrance</string>
+   <string name="ali_mt">Ali.MT</string>
+   <string name="int36">3.6</string>
+   <string name="int200">200</string>
+   <string name="search__">search ..</string>
+   <string name="state">United state, American</string>
+   <string name="dotdotdot">...</string>
+   <string name="lorm1">lormipsum matn sakhtegi v bedon mafhom ke ba
+   estefade az tarahan geraphic mored estefade lormipsum matn sakhtegi v bedon mafhom ke ba
+   estefade az tarahan geraphic mored estefade
+   ghara gerefte va hich many nadarad</string>
+   <string name="caption">Caption</string>
+   <string name="posts">Posts</string>
+   <string name="post">Post</string>
+   <string name="follows">Follows</string>
+   <string name="following">Following</string>
+   <string name="follower">Follower</string>
+   <string name="follow">Follow</string>
+   <string name="message">Message</string>
+   <string name="hint_btn1">00000000000</string>
+   <string name="save">Save</string>
+   <string name="report">Report</string>
+   <string name="lastText">LastText</string>
+   <string name="lastActivity">Last Activity</string>
+   <string name="im_very_good">im very good</string>
+   <string name="direct">Direct</string>
+   <string name="m2">2m</string>
+   <string name="newPost">New Post</string>
+   <string name="activity">Activity</string>
+   <string name="setting">Setting</string>
+   <string name="route">Route</string>
+   <string name="tagMe">Tag Me</string>
+   <string name="write_a_caption">write a caption ...</string>
+   <string name="tag_people">Tag People</string>
+   <string name="advanced_setting">Advanced Setting</string>
+   <string name="share">Share</string>
+   <string name="contact">Contact</string>
+   <string name="contact2">contact</string>
+   <string name="notification">Notification</string>
+   <string name="popup_notification">Popup Notification</string>
+   <string name="light">Light</string>
+   <string name="vibrate">Vibrate</string>
+   <string name="create_group">Create Group</string>
+   <string name="closeFriends">Close Friends</string>
+   <string name="blockedUsers">Bloked Users</string>
+   <string name="savedPost">Saved Post</string>
+   <string name="commentedPost">Commented Post</string>
+   <string name="rankedPost">Ranked Post</string>
+   <string name="off">Off</string>
+   <string name="write_a_message">write a message ...</string>
+   <string name="send_later">Send Later</string>
+   <string name="payment_amount">Payment Amount</string>
+   <string name="send_april_at_">Send April At 12:12</string>
+   <string name="pay">Pay</string>
+   <string name="sendMessage">Send Message ...</string>
+   <string name="location_system">Location System</string>
+   <string name="yes">Yes</string>
+   <string name="no">No</string>
+   <string name="block">Block</string>
+   <string name="mute">Mute</string>
+   <string name="forward">Forward</string>
+   <string name="delete">Delete</string>
+   <string name="point_3">.\n .\n .</string>
+   <string name="facebook">Facebook</string>
+   <string name="twitter">Twitter</string>
+   <string name="telegram">Telegram</string>
+   <string name="ok">Ok</string>
+   <string name="set_as_deafult">Set as Deafult</string>
+   <string name="day_1">1 day</string>
+   <string name="day_10">10 day</string>
+   <string name="dollar_1000">1000$</string>
+   <string name="dollar_100">100$</string>
+   <string name="dollar_10">10$</string>
+   <string name="already_have_an_account">Already have an account</string>
+   <string name="sign_in">Sign in</string>
+   <string name="sign_up">Sign Up</string>
+   <string name="pay_receipt">Pay Receipt</string>
+   <string name="receipt">Receipt</string>
+   <string name="tracking_code">Tracking Code</string>
+   <string name="date">Date</string>
+   <string name="clock">Clock</string>
+   <string name="condition">Condition</string>
+   <string name="_11_45">11:45</string>
+   <string name="_12_10_2020">12/10/2020</string>
+   <string name="_45896325">45896325</string>
+   <string name="successful">successful</string>
+   <string name="shop">Shop</string>
+   <string name="buy_coin">Buy Coin</string>
+   <string name="golden">Golden</string>
+   <string name="bronze">Bronze</string>
+   <string name="silver">Silver</string>
+   <string name="desired_amount">Desired Amount</string>
+   <string name="time">Time</string>
+   <string name="duration">Duration</string>
+   <string name="_12km">12KM</string>
+   <string name="_09_45">09:45</string>
+   <string name="_03_35">03:35</string>
+   <string name="distance">Distance</string>
+   <string name="coin">coin</string>
+   <string name="gallery">gallery</string>
+   <string name="audio">audio</string>
+
+
+
+
+
+
+   <string name="camera_unavailable">Camera unavailable</string>
+   <string name="camera_open_error">An error occurred accessing the camera</string>
+   <string name="video_creating_error">An error occurred creating the video file</string>
+   <string name="video_mode_error">Switching to video mode failed</string>
+   <string name="save_error_internal_storage">An error occurred, save folder changed to internal storage</string>
+   <string name="camera_switch_error">Switching camera failed</string>
+   <string name="click_to_resume_preview">Click on the image to resume preview</string>
+   <string name="photo_not_saved">The photo could not be saved</string>
+   <string name="setting_resolution_failed">Setting proper resolution failed</string>
+   <string name="video_recording_failed">Video recording failed, try using a different resolution</string>
+
+   <!-- Other aspect ratio -->
+   <string name="other">other</string>
+
+   <!-- Settings -->
+   <string name="save_photos">Save photos and videos to</string>
+   <string name="show_preview">Show a photo preview after capturing</string>
+   <string name="shutter_sound">Shutter sound</string>
+   <string name="back_camera">Back camera resolutions</string>
+   <string name="front_camera">Front camera resolutions</string>
+   <string name="photo">Photo</string>
+   <string name="video">Video</string>
+   <string name="focus_before_capture">Focus before capture</string>
+   <string name="volume_buttons_as_shutter">Use volume buttons as shutter</string>
+   <string name="turn_flash_off_at_startup">Turn flash off at startup</string>
+   <string name="flip_front_camera_photos_horizontally">Flip front camera photos horizontally</string>
+   <string name="keep_settings_visible">Keep the setting buttons visible</string>
+   <string name="always_open_back_camera">Always open the app with the Back camera</string>
+   <string name="save_photo_metadata">Save photo exif metadata</string>
+   <string name="photo_compression_quality">Photo compression quality</string>
+   <string name="shutter">Shutter</string>
+   <string name="picture">• Picture</string>
+   <string name="symbol">☻ ☺♥■♦♣♠♠◘•○◙♂♀♪♫↑→↓←∟↔↔▲▲▼! !</string>
+   <string name="more_setting">More Setting</string>
+   <string name="comment">Comment</string>
+   <string name="rank">Rank</string>
+   <string name="ghost">Ghost</string>
+   <string name="also_post_to">Also Post to</string>
+   <string name="privacy">Privacy</string>
+   <string name="me">Me</string>
+   <string name="group">Group</string>
+   <string name="all">All</string>
+   <string name="to_continue_turn_on_device_location_please">To Continue, Turn On Device Location Please.</string>
+
+   <array name="cameraData">
+      <item>photo</item>
+      <item>video</item>
+   </array>
+
+
+   <string name="pleaswait" translatable="false">درحال بارگذاری</string>
+   <string name="pleaswait2" translatable="false"> درحال پردازش اطلاعات</string>
+   <string name="errorconnection" translatable="false">عدم دسترسی به اینترنت</string>
+   <string name="tryconnection" translatable="false">تلاش مجدد</string>
+   <string name="errorserver" translatable="false">خطا در برقراری ارتباط با سرور</string>
+
+</resources>
