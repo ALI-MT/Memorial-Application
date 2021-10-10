@@ -14,12 +14,27 @@ import android.widget.DatePicker
 import android.widget.LinearLayout
 import ir.alimatin.memorial.R
 
+
 class DialogHandler {
+
+    var mDialogResult: OnMyDialogResult? = null
+
+    interface OnMyDialogResult {
+        fun finish(result: String?)
+    }
+
+    fun setDialogResult(dialogResult: OnMyDialogResult) {
+        mDialogResult = dialogResult
+    }
+
     fun showDialogDatePicker(context: Context?): Dialog {
         val mDialog = createMDialog(R.layout.dialog_date_picker, context)
         val btnSubmit = mDialog.findViewById<Button>(R.id.btnSubmit)
         val datePicker = mDialog.findViewById<DatePicker>(R.id.datePicker)
-        btnSubmit.setOnClickListener { v: View? -> mDialog.dismiss() }
+        btnSubmit.setOnClickListener { v: View? ->
+            mDialogResult?.finish("${datePicker.year}-${datePicker.month + 1}-${datePicker.dayOfMonth}T00:00:00+00:00")
+            mDialog.dismiss()
+        }
         return mDialog
     }
 
@@ -39,7 +54,8 @@ class DialogHandler {
                 //context.toast("Hello world!")
                 context.startActivity(Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS))
             }
-            mDialog.dismiss() }
+            mDialog.dismiss()
+        }
         btnCancel.setOnClickListener { v: View? -> mDialog.dismiss() }
         return mDialog
     }
@@ -61,7 +77,7 @@ class DialogHandler {
     fun showDialogDotDirect(context: Context?): Dialog {
         val mDialog = createDotDialog(R.layout.dot_direct, context)
         val ll_DotDirect = mDialog.findViewById<LinearLayout>(R.id.dot_direct)
-        ll_DotDirect.setOnClickListener{ v: View? -> mDialog.dismiss()}
+        ll_DotDirect.setOnClickListener { v: View? -> mDialog.dismiss() }
         return mDialog
     }
 
@@ -73,7 +89,10 @@ class DialogHandler {
         dialog.setContentView(layoutRes)
         val window = dialog.window
         window!!.attributes.gravity = Gravity.CENTER
-        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT)
+        window.setLayout(
+            WindowManager.LayoutParams.MATCH_PARENT,
+            WindowManager.LayoutParams.WRAP_CONTENT
+        )
         //window.getAttributes().windowAnimations = R.style.DialogAnimation; //style id
         dialog.show()
         return dialog
@@ -87,7 +106,10 @@ class DialogHandler {
         dialog.setContentView(layoutRes)
         val window = dialog.window
         window!!.attributes.gravity = Gravity.BOTTOM
-        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT)
+        window.setLayout(
+            WindowManager.LayoutParams.MATCH_PARENT,
+            WindowManager.LayoutParams.WRAP_CONTENT
+        )
         //window.getAttributes().windowAnimations = R.style.DialogAnimation; //style id
         dialog.show()
         return dialog
@@ -102,7 +124,10 @@ class DialogHandler {
         dialog.setContentView(layoutRes)
         val window = dialog.window
         window!!.attributes.gravity = Gravity.CENTER
-        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT)
+        window.setLayout(
+            WindowManager.LayoutParams.MATCH_PARENT,
+            WindowManager.LayoutParams.WRAP_CONTENT
+        )
         //window.getAttributes().windowAnimations = R.style.DialogAnimation; //style id
         dialog.show()
         return dialog

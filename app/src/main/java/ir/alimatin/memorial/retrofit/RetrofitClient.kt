@@ -9,14 +9,15 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
 
-    const val MainServer = "http://185.202.113.116:22/Memorial-Application-NodeJs/"
+    const val MainServer = "http://185.202.113.116:3000/"
 
-    const val ImageMainServer = "localhost:3000/";
+    const val ImageMainServer = "http://api.drfriday.in/";
 
     val retrofitClient: Retrofit.Builder by lazy {
 
-        val levelType: Level = if (BuildConfig.BUILD_TYPE.contentEquals("debug"))
-            Level.BODY else Level.NONE
+        val levelType: Level
+        if (BuildConfig.BUILD_TYPE.contentEquals("debug"))
+            levelType = Level.BODY else levelType = Level.NONE
 
         val logging = HttpLoggingInterceptor()
         logging.setLevel(levelType)

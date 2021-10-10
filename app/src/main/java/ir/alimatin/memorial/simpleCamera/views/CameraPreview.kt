@@ -155,17 +155,18 @@ class CameraPreview : ViewGroup, TextureView.SurfaceTextureListener, MyPreview {
         stopBackgroundThread()
     }
 
-    override fun onSurfaceTextureSizeChanged(surface: SurfaceTexture?, width: Int, height: Int) {
-        closeCamera()
-        openCamera(width, height)
-    }
-
-    override fun onSurfaceTextureUpdated(surface: SurfaceTexture?) {}
-
     override fun onSurfaceTextureDestroyed(surface: SurfaceTexture) = true
+    override fun onSurfaceTextureUpdated(p0: SurfaceTexture) {
+        TODO("Not yet implemented")
+    }
 
     override fun onSurfaceTextureAvailable(surface: SurfaceTexture, width: Int, height: Int) {
         openCamera(width, height)
+    }
+
+    override fun onSurfaceTextureSizeChanged(p0: SurfaceTexture, p1: Int, p2: Int) {
+        closeCamera()
+        openCamera(p1, p2)
     }
 
     private fun startBackgroundThread() {
@@ -822,7 +823,7 @@ class CameraPreview : ViewGroup, TextureView.SurfaceTextureListener, MyPreview {
         }
 
         val texture = mTextureView.surfaceTexture
-        texture.setDefaultBufferSize(mPreviewSize!!.width, mPreviewSize!!.height)
+        texture?.setDefaultBufferSize(mPreviewSize!!.width, mPreviewSize!!.height)
         mPreviewRequestBuilder = mCameraDevice!!.createCaptureRequest(CameraDevice.TEMPLATE_RECORD).apply {
             set(CaptureRequest.CONTROL_CAPTURE_INTENT, CaptureRequest.CONTROL_CAPTURE_INTENT_VIDEO_RECORD)
             set(CaptureRequest.CONTROL_AE_TARGET_FPS_RANGE, getFrameRange())

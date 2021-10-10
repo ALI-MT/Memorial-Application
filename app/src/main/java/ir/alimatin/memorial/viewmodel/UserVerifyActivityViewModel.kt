@@ -8,11 +8,11 @@ import ir.alimatin.memorial.repository.UserVerifyActivityRepository
 
 class UserVerifyActivityViewModel : ViewModel() {
 
-    var servicesLiveData: MutableLiveData<UserVerifyModel>? = null
+    var sendMobileLiveData: MutableLiveData<UserVerifyModel>? = null
 
-    fun getUserVerify(mobile: String): LiveData<UserVerifyModel>? {
-        servicesLiveData = UserVerifyActivityRepository.getUserVerifyApiCall(mobile)
-        return servicesLiveData
+    fun sendMobile(mobile: String): LiveData<UserVerifyModel> {
+        sendMobileLiveData = UserVerifyActivityRepository.sendMobileApi(mobile)
+        return sendMobileLiveData as MutableLiveData<UserVerifyModel>
     }
 
 }

@@ -73,25 +73,43 @@
                 android:contentDescription="@string/app_name" />
         </RelativeLayout>
 
-        <Button
-            android:id="@+id/btn_UserVerify"
+        <ViewSwitcher
+            android:id="@+id/vs_user_verify"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_40sdp"
-            android:layout_below="@id/Linear_PhoneNumber"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
             android:background="@drawable/bg_btn"
-            android:text="@string/get_the_code"
-            android:textColor="@color/colorWhite"
-            android:textSize="@dimen/_12sdp" />
+            android:layout_marginTop="50dp"
+            android:layout_marginHorizontal="@dimen/_40sdp"
+            android:layout_below="@id/Linear_PhoneNumber">
+
+            <TextView
+                android:id="@+id/btn_UserVerify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="@string/get_the_code"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/loadingBtnSubmit"
+                style="@style/AVLoadingIndicatorView.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:indicatorColor="@color/white"
+                app:indicatorName="BallPulseIndicator" />
+
+        </ViewSwitcher>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:gravity="center_horizontal"
-            android:layout_below="@+id/btn_UserVerify"
+            android:layout_below="@+id/vs_user_verify"
             android:layout_marginTop="@dimen/_20sdp"
             android:visibility="invisible">
 
@@ -113,21 +131,6 @@
                 android:textSize="@dimen/_12sdp"
                 android:text="@string/sign_in" />
         </LinearLayout>
-
-        <ir.alirezabdn.wp7progress.WP7ProgressBar
-            android:id="@+id/wp7progressBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            app:animationDuration="2300"
-            app:indicatorColor="@color/colorPrimary"
-            app:indicatorHeight="7"
-            app:indicatorRadius="5"
-            app:interval="100"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
 
     </RelativeLayout>
 </layout>

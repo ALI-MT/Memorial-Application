@@ -25,6 +25,6 @@
 
     https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=44:CF:66:9C:87:D8:47:0D:E3:C6:A7:17:4B:2D:0A:61:DB:E1:13:7E%3Bir.alimatin.memorial
     -->
-    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCiBR2FQdeSJ3LGGxqRcoY5A9Trl8O6x0M</string>
-    <!-- string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDIDfa3E83s5Ed1fzczvPcT3G2fu3Cp8IA</string -->
+<!--    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCiBR2FQdeSJ3LGGxqRcoY5A9Trl8O6x0M</string>-->
+     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDIDfa3E83s5Ed1fzczvPcT3G2fu3Cp8IA</string>
 </resources>

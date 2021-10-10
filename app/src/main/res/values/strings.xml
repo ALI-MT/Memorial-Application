@@ -56,7 +56,7 @@
    <string name="write_a_message">write a message ...</string>
    <string name="send_later">Send Later</string>
    <string name="payment_amount">Payment Amount</string>
-   <string name="send_april_at_">Send April At 12:12</string>
+   <string name="send_april_at_">Send April At 00:00</string>
    <string name="pay">Pay</string>
    <string name="sendMessage">Send Message ...</string>
    <string name="location_system">Location System</string>
@@ -166,5 +166,10 @@
    <string name="errorconnection" translatable="false">عدم دسترسی به اینترنت</string>
    <string name="tryconnection" translatable="false">تلاش مجدد</string>
    <string name="errorserver" translatable="false">خطا در برقراری ارتباط با سرور</string>
+    <string name="wrong_code">کد اشتباه است</string>
+    <string name="contact_permission_rationale">برای لیست مخاطبین نیاز به دسترسی است</string>
+    <string name="error_large_image">عکس مورد نظر بزرگتر از حد مجاز است</string>
 
+   <string name="pick_single">لطفا عکس مورد نظر را انتخاب کنید</string>
+   <string name="file_provider" translatable="false">ir.alimatin.memorial.fileprovider</string>
 </resources>
