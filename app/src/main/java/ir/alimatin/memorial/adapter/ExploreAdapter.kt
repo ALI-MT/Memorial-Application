@@ -6,36 +6,41 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.bumptech.glide.request.RequestOptions
 import ir.alimatin.memorial.R
+import ir.alimatin.memorial.model.PostsModelItem
+import ir.alimatin.memorial.retrofit.RetrofitClient
 import ir.alimatin.memorial.view.TimeLineActivity
-import ir.alimatin.memorial.model.DataExplore
 import kotlinx.android.synthetic.main.item_explore.view.*
 
 
 class ExploreAdapter(private val contInst: Context) :
-        RecyclerView.Adapter<ExploreAdapter.CustomViewHolder>() {
-    private var list: List<DataExplore>
+    RecyclerView.Adapter<ExploreAdapter.CustomViewHolder>() {
+    private var list: List<PostsModelItem>
 
     init {
         list = ArrayList()
     }
 
-    constructor(contInst: Context, list: List<DataExplore>) : this(contInst) {
+    constructor(contInst: Context, list: List<PostsModelItem>) : this(contInst) {
         this.list = list
     }
 
-    fun setData(list: List<DataExplore>) {
+    fun setData(list: List<PostsModelItem>) {
         this.list = list
         notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(
-            parent: ViewGroup,
-            viewType: Int
+        parent: ViewGroup,
+        viewType: Int
     ): ExploreAdapter.CustomViewHolder =
-            CustomViewHolder(
-                    LayoutInflater.from(contInst).inflate(R.layout.item_explore, parent, false)
-            )
+        CustomViewHolder(
+            LayoutInflater.from(contInst).inflate(R.layout.item_explore, parent, false)
+        )
 
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
         holder.setData(list[position])
@@ -46,7 +51,17 @@ class ExploreAdapter(private val contInst: Context) :
     inner class CustomViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         private val cvItem = view.cvItem
-        fun setData(data: DataExplore) {
+        private val image = view.ivImage
+        fun setData(data: PostsModelItem) {
+            val options = RequestOptions()
+                .centerCrop()
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
+            Glide.with(contInst)
+                .load(RetrofitClient.ImageMainServer + data.medias)
+                .apply(options)
+                .transition(DrawableTransitionOptions.withCrossFade())
+                .into(image)
+
             cvItem.setOnClickListener {
                 contInst.startActivity(Intent(contInst, TimeLineActivity::class.java))
             }

@@ -1,8 +1,6 @@
 package ir.alimatin.memorial.retrofit
 
-import ir.alimatin.memorial.model.CreatePostsModel
-import ir.alimatin.memorial.model.UploadModel
-import ir.alimatin.memorial.model.UserVerifyModel
+import ir.alimatin.memorial.model.*
 import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.http.*
@@ -14,6 +12,9 @@ interface ApiInterface {
     fun sendMobile(
         @Field("phone") phone: String
     ): Call<UserVerifyModel>
+
+    @GET("posts")
+    fun posts(): Call<List<PostsModelItem>>
 
     @FormUrlEncoded
     @POST("posts")

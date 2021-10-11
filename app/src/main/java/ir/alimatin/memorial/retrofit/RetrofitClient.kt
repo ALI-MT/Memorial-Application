@@ -11,7 +11,7 @@ object RetrofitClient {
 
     const val MainServer = "http://185.202.113.116:3000/"
 
-    const val ImageMainServer = "http://api.drfriday.in/";
+    const val ImageMainServer = "http://185.202.113.116:3000/";
 
     val retrofitClient: Retrofit.Builder by lazy {
 

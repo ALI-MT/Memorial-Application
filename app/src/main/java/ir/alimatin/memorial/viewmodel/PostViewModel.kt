@@ -3,9 +3,7 @@ package ir.alimatin.memorial.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import ir.alimatin.memorial.model.CreatePostsModel
-import ir.alimatin.memorial.model.UploadModel
-import ir.alimatin.memorial.model.UserVerifyModel
+import ir.alimatin.memorial.model.*
 import ir.alimatin.memorial.repository.PostRepository
 import ir.alimatin.memorial.utilities.AppUtilities
 import ir.alimatin.memorial.utilities.ProgressRequestBody
@@ -14,6 +12,7 @@ import java.io.File
 class PostViewModel : ViewModel() {
 
     var setPostLiveData: MutableLiveData<CreatePostsModel>? = null
+    var getPostLiveData: MutableLiveData<List<PostsModelItem>>? = null
     var uploadLiveData: MutableLiveData<UploadModel>? = null
 
 
@@ -50,6 +49,11 @@ class PostViewModel : ViewModel() {
             sendLater
         )
         return setPostLiveData as MutableLiveData<CreatePostsModel>
+    }
+
+    fun getPosts(): LiveData<List<PostsModelItem>> {
+        getPostLiveData = PostRepository.getPostApi()
+        return getPostLiveData as MutableLiveData<List<PostsModelItem>>
     }
 
     fun uploadImage(

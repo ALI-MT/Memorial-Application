@@ -9,6 +9,7 @@ import com.arasthel.spannedgridlayoutmanager.SpannedGridLayoutManager
 import ir.alimatin.memorial.R
 import ir.alimatin.memorial.adapter.ExploreAdapter
 import ir.alimatin.memorial.model.DataExplore
+import ir.alimatin.memorial.model.PostsModelItem
 import kotlinx.android.synthetic.main.activity_explore.rvListExplore
 import kotlinx.android.synthetic.main.activity_maps.cardView
 import kotlinx.android.synthetic.main.activity_profile.*
@@ -20,7 +21,7 @@ class ProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
         contInst = this
-        initExplore(getDataExplore())
+//        initExplore(getDataExplore())
 
         cardView.setOnClickListener {
             startActivity(Intent(contInst, StoryActivity::class.java))
@@ -52,7 +53,7 @@ class ProfileActivity : AppCompatActivity() {
     }
 
 
-    private fun initExplore(list: List<DataExplore>) {
+    private fun initExplore(list: List<PostsModelItem>) {
         val spannedGridLayoutManager = SpannedGridLayoutManager(
                 orientation = SpannedGridLayoutManager.Orientation.VERTICAL,
                 spans = 3)

@@ -3,6 +3,7 @@ package ir.alimatin.memorial.repository
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import ir.alimatin.memorial.model.CreatePostsModel
+import ir.alimatin.memorial.model.PostsModelItem
 import ir.alimatin.memorial.model.UploadModel
 import ir.alimatin.memorial.retrofit.RetrofitClient
 import okhttp3.RequestBody
@@ -12,7 +13,8 @@ import retrofit2.Response
 
 object PostRepository {
 
-    val getPost = MutableLiveData<CreatePostsModel>()
+    val setPost = MutableLiveData<CreatePostsModel>()
+    val posts = MutableLiveData<List<PostsModelItem>>()
     val upload = MutableLiveData<UploadModel>()
 
 
@@ -61,7 +63,7 @@ object PostRepository {
                 Log.v("DEBUG : ", response.body().toString())
 
                 response.body()?.apply {
-                    getPost.value = CreatePostsModel(
+                    setPost.value = CreatePostsModel(
                         status = this.status,
                         _id = this._id,
                         __v = this.__v,
@@ -85,7 +87,30 @@ object PostRepository {
 
             }
         })
-        return getPost
+        return setPost
+    }
+
+    fun getPostApi(): MutableLiveData<List<PostsModelItem>> {
+        val call = RetrofitClient.apiInterface.posts()
+
+        call.enqueue(object : Callback<List<PostsModelItem>> {
+            override fun onFailure(call: Call<List<PostsModelItem>>, t: Throwable) {
+                Log.v("DEBUG : ", t.message.toString())
+            }
+
+            override fun onResponse(
+                call: Call<List<PostsModelItem>>,
+                response: Response<List<PostsModelItem>>
+            ) {
+                Log.v("DEBUG : ", response.body().toString())
+
+                response.body()?.apply {
+                    posts.value = this
+                }
+
+            }
+        })
+        return posts
     }
 
     fun uploadImages(
