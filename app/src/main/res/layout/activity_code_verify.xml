@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/user_and_code_verify_background"
+    android:fitsSystemWindows="true"
+    tools:context=".view.UserVerifyActivity">
+
+    <TextView
+        android:id="@+id/txt_AppName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:fontFamily="@font/quantify"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_18sdp" />
+
+    <TextView
+        android:id="@+id/txt_PageName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_AppName"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/qanelas_soft_demo_extrabold"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/text_dark"/>
+
+    <TextView
+        android:id="@+id/txt_Description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_PageName"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/qanelas_soft_demo_ultralight"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/text_light"
+        android:textSize="@dimen/_11sdp" />
+
+    <customView.otpView.OtpView
+        android:id="@+id/otp_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_60sdp"
+        android:layout_below="@id/txt_Description"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:inputType="number"
+        android:lineSpacingExtra="@dimen/_40sdp"
+        android:textAlignment="center"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/_16sdp"
+        app:itemCount="4"
+        app:lineColor="@color/colorPrimary"
+        app:viewType="line" />
+
+
+    <Button
+        android:id="@+id/btn_CodeVerify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_40sdp"
+        android:layout_below="@+id/otp_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/bg_btn"
+        android:text="@string/sign_up"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_12sdp" />
+
+</RelativeLayout>

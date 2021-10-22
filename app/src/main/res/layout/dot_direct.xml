@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/dot_direct"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:padding="@dimen/_8sdp"
+    android:layout_marginHorizontal="@dimen/_20sdp"
+    android:background="@drawable/bg_card"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_6sdp"
+        android:gravity="center"
+        android:paddingLeft="@dimen/_16sdp"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:outlineSpotShadowColor="@color/colorCoin"
+            android:background="@drawable/ic_bg_coin"
+            app:cardCornerRadius="@dimen/_20sdp"
+            app:cardElevation="@dimen/_3sdp">
+
+            <ImageButton
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/ic_bg_coin">
+            </ImageButton>
+
+            <ImageView
+                android:id="@+id/iv_coin"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/app_name"
+                android:focusable="true"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_coins_white" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/_10sdp"
+            android:text="@string/coin"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/_12sdp" />
+    </LinearLayout>
+
+
+    <Space
+        android:layout_width="24dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_6sdp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:outlineSpotShadowColor="@color/colorContact"
+            android:background="@drawable/ic_bg_contact"
+            app:cardCornerRadius="@dimen/_20sdp"
+            app:cardElevation="@dimen/_3sdp">
+
+            <ImageButton
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/ic_bg_contact">
+            </ImageButton>
+
+            <ImageView
+                android:id="@+id/iv_contact"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/app_name"
+                android:focusable="true"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_user" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/_10sdp"
+            android:text="@string/contact2"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/_12sdp" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="24dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_6sdp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:outlineSpotShadowColor="@color/colorAudio"
+            android:background="@drawable/ic_bg_audio"
+            app:cardCornerRadius="@dimen/_20sdp"
+            app:cardElevation="@dimen/_3sdp">
+
+            <ImageButton
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/ic_bg_audio">
+            </ImageButton>
+
+            <ImageView
+                android:id="@+id/iv_audio"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/app_name"
+                android:focusable="true"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_audio" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/_10sdp"
+            android:text="@string/audio"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/_12sdp" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="24dp"
+        android:layout_height="0dp"
+        android:layout_weight="1.2" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_6sdp"
+        android:gravity="center"
+        android:paddingRight="@dimen/_16sdp"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:outlineSpotShadowColor="@color/colorGallery"
+            android:background="@drawable/ic_bg_gallery"
+            app:cardCornerRadius="@dimen/_20sdp"
+            app:cardElevation="@dimen/_3sdp">
+
+            <ImageButton
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/ic_bg_gallery">
+            </ImageButton>
+
+            <ImageView
+                android:id="@+id/iv_gallery"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/app_name"
+                android:focusable="true"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_gallery" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/_10sdp"
+            android:text="@string/gallery"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/_12sdp" />
+    </LinearLayout>
+
+</LinearLayout>
