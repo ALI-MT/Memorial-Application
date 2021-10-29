@@ -1,0 +1,2 @@
+com/kroegerama/imgpicker/BuildConfig.java
+ com.kroegerama.imgpicker.BuildConfig

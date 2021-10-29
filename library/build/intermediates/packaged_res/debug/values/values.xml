@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bottomSheetTileBackground">#171219</color>
+    <color name="bottomSheetTileImageBackground">#aaa</color>
+    <color name="bottomSheetTileShade">#80000000</color>
+    <color name="light_color">#323259</color>
+    <color name="primary">#A371FF</color>
+    <dimen name="imagePickerColumnSize">128dp</dimen>
+    <dimen name="imagePickerPeekHeight">360dp</dimen>
+    <dimen name="imagePickerTileSpacing">2dp</dimen>
+    <plurals name="imagePickerMulti">
+        <item quantity="one">You have selected one image</item>
+        <item quantity="other">You have selected %1$d images</item>
+    </plurals>
+    <plurals name="imagePickerMultiMore">
+        <item quantity="one">You have to select one more image</item>
+        <item quantity="other">You have to select %1$d more images</item>
+    </plurals>
+    <string name="imagePickerEmpty">No images found</string>
+    <string name="imagePickerLoading">Loading…</string>
+    <string name="imagePickerMultiLimit">You cannot select more than %1$d images</string>
+    <string name="imagePickerSingle">Please select an image</string>
+    <string name="toastImagePickerNoWritePermission">Write storage permission not granted :(</string>
+    <style name="CustomBottomSheet" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="shapeAppearanceOverlay">@style/CustomShapeAppearanceBottomSheetDialog</item>
+    </style>
+    <style name="CustomShapeAppearanceBottomSheetDialog" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">40dp</item>
+        <item name="cornerSizeTopLeft">40dp</item>
+    </style>
+    <style name="customBottomSheetDialog" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheet</item>
+    </style>
+</resources>
