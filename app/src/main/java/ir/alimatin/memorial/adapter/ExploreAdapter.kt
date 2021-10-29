@@ -51,7 +51,7 @@ class ExploreAdapter(private val contInst: Context) :
     inner class CustomViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         private val cvItem = view.cvItem
-        private val image = view.ivImage
+        private val img = view.ivImage
         fun setData(data: PostsModelItem) {
             val options = RequestOptions()
                 .centerCrop()
@@ -59,8 +59,9 @@ class ExploreAdapter(private val contInst: Context) :
             Glide.with(contInst)
                 .load(RetrofitClient.ImageMainServer + data.medias)
                 .apply(options)
+                .placeholder(R.drawable.bg_message_user)
                 .transition(DrawableTransitionOptions.withCrossFade())
-                .into(image)
+                .into(img)
 
             cvItem.setOnClickListener {
                 contInst.startActivity(Intent(contInst, TimeLineActivity::class.java))
